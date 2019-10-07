@@ -5,7 +5,7 @@
  *	Ascii Average is 79
  *
  *  Letter Avg: O
- * 
+ * (3-6)
  */
 public class MesoInherit {
 	
