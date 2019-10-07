@@ -8,5 +8,9 @@
  * 
  */
 public class MesoInherit {
+	
+	public MesoInherit(MesoStation mesoStation) {
+		String stationId = mesoStation.getStID();
+	}
 
 }

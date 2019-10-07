@@ -7,5 +7,8 @@
  * OKMU
  */
 public class LetterAvg {
+	public void letterAvg() {
+		
+	}
 
 }
