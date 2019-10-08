@@ -71,10 +71,10 @@ public class PosAvg {
 		return array;
 	}
 	
-	public int indexOfStation (String stationId) {
+	public int indexOfStation (String stationID) {
 		int indexOfStation = 0;
 		for (int i = 0; i < storedStations.length; i++) {
-			if (stationId.equalsIgnoreCase(storedStations[i])) {
+			if (stationID.equalsIgnoreCase(storedStations[i])) {
 				indexOfStation = i;
 				return indexOfStation;
 			}
@@ -100,6 +100,10 @@ public class PosAvg {
 	
 	@Override
 	public String toString() {
-		
+		String returnedString = "This index is average of ";
+		for (int i = 0; i < averageStations.length; i++) {
+			returnedString.concat(averageStations[i] + ", ");
+		}
+		return returnedString;
 	}
 }
