@@ -10,7 +10,7 @@ import java.io.IOException;
 public class PosAvg {
 	
 	// Stores stations read in through readFile, initialized with 1 "slot"
-	private String[] storedStations = new String[1];
+	private static String[] storedStations = new String[1];
 	
 	//Stores sets of stations whose indexes average out to become the index of stID, initialized to 1 "slot"
 	private String[] averageStations = new String[1];
@@ -23,7 +23,7 @@ public class PosAvg {
 	}
 	// Taken from Nicholas Babb - Project 1. Variable names and method functions were modified
 	// to accommodate the nature of this project, as well as suggestions given during code review.
-	public void readFile (String fileName) throws IOException {
+	public static void readFile (String fileName) throws IOException {
 		// Holds entire line
 		String readLineStorage = "Default";
 		// Holds substring of readLineStorage, station name specifically
@@ -62,7 +62,7 @@ public class PosAvg {
 	
 	// Taken from Nicholas Babb - Project 1. Variable names and 
 	// increase in array size changed to accommodate names in this project.
-	public String[] expandArray (String[] array) {
+	public static String[] expandArray (String[] array) {
 		String[] temp = new String[array.length + 1];
 		for (int i = 0; i < array.length; i++) {
 			temp[i] = array[i];
