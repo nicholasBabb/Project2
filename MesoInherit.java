@@ -10,7 +10,7 @@
 public class MesoInherit {
 	
 	private String stationId;
-	private char[] charArray;
+	private static char[] charArray;
 			
 	public MesoInherit(MesoStation mesoStation) {
 		stationId = mesoStation.getStID();
@@ -36,7 +36,7 @@ public class MesoInherit {
 		return asciiAverages;
 	}
 	// Calculate average letter value. Inherited from MesoAbstract
-	public char letterAverage() {
+	public static char letterAverage() {
 		char letterAvg = charArray[0];
 		return letterAvg;
 	}
