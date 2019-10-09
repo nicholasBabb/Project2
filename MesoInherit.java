@@ -3,8 +3,6 @@
  *  Ascii Ceiling is 79
  *  Ascii Floor is 78
  *	Ascii Average is 79
- *	char e = 't';
- *	int whatever = (int) e; 	I GIVE ASCII
  *	
  *  Letter Avg: O
  * (3-6)
@@ -12,6 +10,7 @@
 public class MesoInherit {
 	
 	private String stationId;
+	private char[] charArray;
 			
 	public MesoInherit(MesoStation mesoStation) {
 		stationId = mesoStation.getStID();
@@ -23,7 +22,7 @@ public class MesoInherit {
 		int[] asciiAverages = new int[3];
 		double averageValue = 0;
 		//Splitting stationId into a char array to easily access each letter for conversion to ASCII.
-		char[] charArray = stationId.toCharArray();
+		charArray = stationId.toCharArray();
 		for (int i = 0; i < charArray.length; i++) {
 			int asciiValue = (int) charArray[i];
 			averageValue += (double) asciiValue;
@@ -34,10 +33,12 @@ public class MesoInherit {
 		asciiAverages[2] = (int) Math.round(averageValue);
 		asciiAverages[1] = (int) Math.floor(averageValue);
 		asciiAverages[0] = (int) Math.ceil(averageValue);
+		return asciiAverages;
 	}
 	// Calculate average letter value. Inherited from MesoAbstract
 	public char letterAverage() {
-		
+		char letterAvg = charArray[0];
+		return letterAvg;
 	}
 
 }
