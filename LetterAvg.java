@@ -12,12 +12,32 @@ import java.io.IOException;
  * (Line 7-End)
  */
 public class LetterAvg {
+	// First letter of the inputed stationId
 	private char letterInput;
+	// Stores all stations. Serves same purpose as the storedStation array in PosAvg
 	private String[] storedStations = new String[1];
+	// Length of a single stationId
+	private int stationIdLength = 4;
+	// Stores all stations whose first letter matches letterInput.
+	private String[] storedMatchingStation = new String[1];
+	
 	public void letterAvg () {
 		letterInput = MesoInherit.letterAverage();
-		
-		
+		try {
+			readFile("Mesonet.txt");
+		} catch (IOException e) {
+			System.out.println("Error reading from file!\n");
+			e.printStackTrace();
+		}
+		// Keep track of storedMatchingStation arrays
+		int matchingIndex = 0;
+		// Loop to determine stations with first letter matching
+		for (int i = 0; i < storedStations.length; i++) {
+			if (storedStations[i].charAt(0) == letterInput) {
+				storedMatchingStation[matchingIndex] = storedStations[i];
+				matchingIndex += 1;
+			}	
+		}
 	}
 	
 	public void readFile (String fileName) throws IOException {
