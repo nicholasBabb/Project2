@@ -21,8 +21,11 @@ public class LetterAvg {
 	// Stores all stations whose first letter matches letterInput.
 	private String[] storedMatchingStation = new String[1];
 	
-	public void letterAvg () {
-		letterInput = MesoInherit.letterAverage();
+	public LetterAvg (char input) {
+		letterInput = input;
+	}
+	
+	public int numberOfStationWithLetterAvg() {
 		try {
 			readFile("Mesonet.txt");
 		} catch (IOException e) {
@@ -38,6 +41,7 @@ public class LetterAvg {
 				matchingIndex += 1;
 			}	
 		}
+		return matchingIndex;
 	}
 	
 	public void readFile (String fileName) throws IOException {
@@ -86,6 +90,11 @@ public class LetterAvg {
 		}
 		array = temp;
 		return array;
+	}
+	@Override
+	public String toString() { 
+		
+		return "TEST";
 	}
 
 }
