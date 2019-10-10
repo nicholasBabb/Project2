@@ -36,7 +36,7 @@ public class MesoInherit {
 		return asciiAverages;
 	}
 	// Calculate average letter value. Inherited from MesoAbstract
-	public static char letterAverage() {
+	public char letterAverage() {
 		char letterAvg = charArray[0];
 		return letterAvg;
 	}
